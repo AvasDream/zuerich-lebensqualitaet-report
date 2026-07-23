@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;
+    --foreground: 210 33% 9%;
+    --border: 36 21% 85%;
+    --input: 36 21% 85%;
+    --ring: 220 78% 48%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-serif antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: #1B5FD9;
+    color: #FAF7F2;
+  }
+
+  :focus-visible {
+    outline: 2px solid #1B5FD9;
+    outline-offset: 3px;
+  }
+
+  .theme-dark :focus-visible {
+    outline-color: #E63329;
+  }
+}
+
+@layer components {
+  .font-expanded {
+    font-stretch: expanded;
+  }
+  .noise-overlay {
+    background-image: url('/texture-noise.svg');
+    background-size: 512px 512px;
+    mix-blend-mode: overlay;
+  }
+  .outline-number {
+    -webkit-text-stroke: 2px rgba(16, 24, 32, 0.14);
+    color: transparent;
+  }
+  .theme-dark .outline-number {
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.14);
+  }
+  .kicker {
+    @apply font-display font-semibold uppercase tracking-[0.18em] text-xs;
+  }
+  .hairline-dark {
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+}
