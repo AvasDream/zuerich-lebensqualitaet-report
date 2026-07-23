@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" fill="none">
+  <!-- Reduzierte Vektorkarte der Stadt Zürich: Limmat & See in lake-Blau, 12 Kreise als Umrisse, Kreis 4 hervorgehoben -->
+  <defs>
+    <style>
+      .kreis { stroke: #8FA8C8; stroke-width: 2; fill: rgba(27,95,217,0.04); }
+      .kreis-label { font-family: 'IBM Plex Mono', monospace; font-size: 26px; fill: #5A7396; }
+      .k4 { stroke: #E63329; stroke-width: 3; fill: rgba(230,51,41,0.10); }
+      .k5 { stroke: #E63329; stroke-width: 2.5; fill: rgba(230,51,41,0.06); }
+      .water { fill: #1B5FD9; fill-opacity: 0.85; }
+      .river { stroke: #1B5FD9; stroke-width: 14; stroke-linecap: round; fill: none; }
+      .river2 { stroke: #1B5FD9; stroke-width: 7; stroke-linecap: round; fill: none; opacity: .8; }
+    </style>
+  </defs>
+
+  <!-- Stadtkreise (stilisiert) -->
+  <path class="kreis" d="M470 190 L600 170 L720 200 L760 300 L680 340 L560 330 L480 290 Z"/>      <!-- K1-ish oben -> Altstadt Lage unten, abstrakt -->
+  <path class="kreis" d="M560 340 L680 350 L700 430 L620 470 L540 440 Z"/>                       <!-- K1 Altstadt -->
+  <path class="kreis" d="M430 300 L555 335 L535 440 L470 500 L400 430 L395 360 Z"/>              <!-- K2 -->
+  <path class="kreis" d="M360 340 L395 360 L400 430 L470 500 L430 560 L330 540 L300 440 Z"/>     <!-- K3 Wiedikon -->
+  <path class="k4" d="M470 510 L535 450 L540 440 L620 480 L600 560 L520 590 L450 565 Z"/>        <!-- K4 Langstrasse (hervorgehoben) -->
+  <path class="k5" d="M620 480 L700 440 L760 470 L750 560 L660 600 L600 560 Z"/>                 <!-- K5 Industriequartier -->
+  <path class="kreis" d="M705 310 L790 270 L880 300 L900 400 L830 470 L765 460 L705 430 Z"/>     <!-- K6 -->
+  <path class="kreis" d="M770 480 L835 480 L890 560 L870 660 L770 680 L680 640 L660 600 L755 565 Z"/> <!-- K7/8 -->
+  <path class="kreis" d="M520 600 L600 570 L660 610 L680 640 L770 690 L730 770 L620 800 L540 740 Z"/> <!-- K8 -->
+  <path class="kreis" d="M330 550 L425 570 L445 575 L515 600 L535 750 L480 830 L380 800 L320 700 Z"/> <!-- K9 Albisrieden -->
+  <path class="kreis" d="M480 300 L480 290 L470 190 L390 200 L300 260 L290 330 L360 340 Z"/>     <!-- K10 Höngg -->
+  <path class="kreis" d="M600 170 L730 160 L860 210 L880 295 L795 265 L765 300 L725 205 Z"/>     <!-- K11 -->
+  <path class="kreis" d="M300 270 L290 340 L300 440 L220 460 L160 400 L180 300 L240 250 Z"/>     <!-- K12 -->
+
+  <!-- Limmat: fliesst vom See nach Nordwesten -->
+  <path class="river" d="M640 640 C 620 580, 600 520, 585 470 C 565 400, 540 340, 500 290 C 470 250, 430 220, 380 190"/>
+  <!-- Sihl -->
+  <path class="river2" d="M470 780 C 500 700, 540 630, 575 565"/>
+  <!-- Zürichsee -->
+  <path class="water" d="M650 660 C 700 700, 780 720, 860 740 C 960 765, 1060 800, 1120 850 L 1180 905 L 1180 1180 L 700 1180 C 660 1060, 640 940, 630 830 C 622 745, 622 700, 650 660 Z"/>
+
+  <!-- Badestellen als Dots am Seeufer -->
+  <g fill="#FAF7F2" opacity="0.9">
+    <circle cx="690" cy="710" r="5"/><circle cx="740" cy="740" r="5"/><circle cx="800" cy="758" r="5"/>
+    <circle cx="870" cy="780" r="5"/><circle cx="940" cy="805" r="5"/><circle cx="1010" cy="835" r="5"/>
+    <circle cx="1080" cy="870" r="5"/><circle cx="665" cy="770" r="5"/><circle cx="655" cy="840" r="5"/>
+    <circle cx="660" cy="910" r="5"/><circle cx="680" cy="985" r="5"/><circle cx="700" cy="1060" r="5"/>
+  </g>
+
+  <!-- Kreis-Labels -->
+  <text class="kreis-label" x="585" y="410">1</text>
+  <text class="kreis-label" x="455" y="415">2</text>
+  <text class="kreis-label" x="360" y="465">3</text>
+  <text class="kreis-label" x="520" y="535" fill="#E63329">4</text>
+  <text class="kreis-label" x="670" y="530" fill="#E63329">5</text>
+  <text class="kreis-label" x="790" y="385">6</text>
+  <text class="kreis-label" x="775" y="585">7</text>
+  <text class="kreis-label" x="620" y="700">8</text>
+  <text class="kreis-label" x="415" y="700">9</text>
+  <text class="kreis-label" x="390" y="270">10</text>
+  <text class="kreis-label" x="740" y="240">11</text>
+  <text class="kreis-label" x="225" y="365">12</text>
+
+  <!-- Massstab / Nordpfeil -->
+  <g stroke="#5A7396" stroke-width="2">
+    <path d="M1080 120 L1080 70 M1080 70 L1072 86 M1080 70 L1088 86"/>
+  </g>
+  <text class="kreis-label" x="1062" y="150">N</text>
+</svg>
